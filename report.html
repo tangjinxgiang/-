@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery-2.1.4.js"></script>
+  <script src="js/jquery-weui.min.js"></script>
+  <link href="css/jquery-weui.min.css" rel="stylesheet" />
+  <link href="css/weui.min.css" rel="stylesheet" />
+  <link href="css/demos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css">
+  <title>维修汇报</title>
+  <style media="screen">
+    .weui-toast{
+      top:40%;
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="report">
+    <p class="report_title">维修情况汇报</p>
+  </div>
+  <div class="weui-cells weui-cells_form">
+    <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">维修费用(元)</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入费用">
+      </div>
+    </div>
+    <div class="weui-cell weui-cell_last">
+      <div class="weui-cell__hd"><label class="weui-label">维修人工</label></div>
+      <div class="weui-cell__bd">
+        <input class="weui-input" type="text" placeholder="">
+      </div>
+    </div>
+    <div class="weui-cells__title">维修情况</div>
+    <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入文本" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+  <script type="text/javascript">
+  $(function(){
+    $('.weui-btn.weui-btn_primary').click(function(event) {
+      $.toast("提交成功", 2000,function(){
+        window.history.go(-1);
+      });
+    });
+  })
+</script>
+</body>
+</html>

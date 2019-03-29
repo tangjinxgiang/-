@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no;">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="font/iconfont.css">
+  <link rel="stylesheet" href="css/weui.min.css">
+  <script src="js/jquery-2.1.4.js"></script>
+  <link href="css/jquery-weui.min.css" rel="stylesheet" />
+  <script src="js/swiper.js"></script>
+  <title>物业首页</title>
+  <style media="screen">
+.weui-cell{
+  flex:3;
+  color:red;
+  display: flex;
+}
+.weui-label{
+  width: 50px;
+  flex: 1;
+}
+.weui-cell__bd{
+  flex:2;
+}
+.weui-cell::before{
+  display: none;
+}
+
+
+
+  </style>
+</head>
+<body ontouchstart="">
+  <div class="title">
+    <img src="image/ico.jpg" alt="">
+    <div>
+        <p>南宫芯羽</p>
+        <p>431229199801212142</p>
+    </div>
+  </div>
+  <div class="hint">
+    欢迎您使用<span>铭图软件</span>!
+  </div>
+  <div class="center_box">
+      <ul>
+        <li onclick="window.location.href='notice.html';return false">
+          <i class="iconfont icon-ibaoxiu"></i>
+          <em>意见报修</em>
+        </li>
+        <li onclick="window.location.href='binding.html';return false">
+          <i class="iconfont icon-wyjf"></i>
+          <em>身份绑定</em>
+        </li>
+        <li  onclick="window.location.href='record.html';return false">
+          <i class="iconfont icon-lishijilu"></i>
+          <em>订单中心</em>
+        </li>
+        <li onclick="alert('解除成功！')">
+          <i class="iconfont icon-gerenzhongxin"></i>
+          <em>解除绑定</em>
+        </li>
+      </ul>
+  </div>
+  <ul class="logo_list_con">
+    <li>
+      <span>太平盛世</span>
+      <input type="date">
+      <em class="iconfont icon-jiaofei" onclick="window.location.href='pay2.html';return false"></em>
+    </li>
+     <li >
+      <span>阿房宫</span>
+      <input type="date">
+      <em  class="iconfont icon-jiaofei" onclick="window.location.href='pay2.html';return false"></em>
+    </li>
+  </ul>
+  <div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530597125000&di=df9a39eac84a4081d7c24c7f7e28c69e&imgtype=0&src=http%3A%2F%2Fpic.90sjimg.com%2Fback_pic%2Fqk%2Fback_origin_pic%2F00%2F02%2F71%2F99c495ed93bd5b31c92481cb761a160d.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534757785239&di=06ae90fb54d758941aa043ae637b485e&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1101%2F26%2Fc1%2F6643501_1296047638590_1024x1024it.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530599254479&di=3e386eac5107e47a3a7e38bb3006e102&imgtype=0&src=http%3A%2F%2Fbpic.ooopic.com%2F16%2F90%2F02%2F16900266-1c1ee3e1f1d172114a4442be5e8dc886.jpg" alt=""></div>
+    <div class="swiper-slide"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534757785234&di=de506b9213006f2ea5fa087bbc86ab3e&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01355558462982a8012060c8581bda.JPG" alt=""></div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(".swiper-container").swiper({
+    loop: true,
+    autoplay: 3000,
+    effect : 'cube',
+    cube: {
+      shadow: false
+    }
+  });
+  // 给input  date设置默认值
+  var now = new Date();
+  //格式化日，如果小于9，前面补0
+  var day = ("0" + now.getDate()).slice(-2);
+  //格式化月，如果小于9，前面补0
+  var month = ("0" + (now.getMonth() + 1)).slice(-2);
+  //拼装完整日期格式
+  var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+  //完成赋值
+  $('.logo_list_con input').val(today);
+</script>
+</body>
+</html>

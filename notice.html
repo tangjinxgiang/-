@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>意见报修</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery-weui.min.js"></script>
+    <link href="css/jquery-weui.min.css" rel="stylesheet" />
+    <link href="css/weui.min.css" rel="stylesheet" />
+    <link href="css/demos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="font/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style media="screen">
+      .weui-toast{
+        top:40%;
+        margin-left: 0;
+      }
+    </style>
+ <body>
+
+    <div class="weui-tab">
+      <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+          <p>报修记录</p>
+          <ul>
+            <li onclick="window.location.href='report.html';return false">
+              <p>小区名字</p>
+              <span>停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办</span>
+              <time>2018/7/12 12:00:12</time>
+              <i>未受理</i>
+            </li>
+            <li onclick="window.location.href='report.html';return false">
+              <p>小区名字</p>
+              <span>停电了停电了怎么办</span>
+              <time>2018/7/12 12:00:12</time>
+              <i>已受理</i>
+            </li>
+            <li onclick="window.location.href='report.html';return false">
+              <p>小区名字</p>
+              <span>停电了怎么停电了怎么停电了怎么停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办停电了怎么办</span>
+              <time>2018/7/12 12:00:12</time>
+              <i>已关闭</i>
+            </li>
+            <li onclick="window.location.href='report.html';return false">
+              <p>小区名字</p>
+              <span>测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</span>
+              <time>2018/7/12 12:00:12</time>
+              <i>已关闭</i>
+            </li>
+          </ul>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item">
+          <p>报修投诉</p>
+          <div class="repairs">
+            <div class="repairs_top">
+            <!--  <img src="image/ico.jpg" alt="">
+              <span>微信网名<i>物业名字</i></span>-->
+            <div class="weui-cell">
+              <div class="weui-cell__hd"><label class="weui-label">申请人</label></div>
+              <div class="weui-cell__bd">
+                <input class="weui-input" type="text">
+              </div>
+            </div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd"><label for="" class="weui-label">申请日期</label></div>
+              <div class="weui-cell__bd">
+                <input class="weui-input" type="date" value="">
+              </div>
+            </div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd"><label class="weui-label">维修物业</label></div>
+              <div class="weui-cell__bd">
+                <input class="weui-input" type="text">
+              </div>
+            </div>
+            </div>
+            <div class="repairs_bottomn">
+              <textarea  placeholder="描述你遇到的问题"></textarea>
+            </div>
+            <a href="javascript:;" class="weui-btn weui-btn_primary">提交</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="weui-tabbar">
+        <a href="#tab1" class="weui-tabbar__item weui-bar__item--on">
+          <div class="weui-tabbar__icon">
+            <i class="iconfont icon-weixiujilu"></i>
+          </div>
+          <p class="weui-tabbar__label">记录</p>
+        </a>
+        <a href="#tab2" class="weui-tabbar__item">
+          <div class="weui-tabbar__icon">
+            <i class="iconfont icon-weixiu-copy"></i>
+          </div>
+          <p class="weui-tabbar__label">我要报修</p>
+        </a>
+      </div>
+    </div>
+
+    <script>
+        $(function(){
+          $('.weui-btn.weui-btn_primary').click(function(event) {
+            $.toast("提交成功", 2000,function(){
+              window.location.reload();
+            });
+          });
+        })
+    </script>
+  </body>
+</html>
